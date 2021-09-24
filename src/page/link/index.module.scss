@@ -1,0 +1,84 @@
+@import "src/asset/style/mixin";
+
+.linkContainer {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include for-phone-only {
+    padding-top: 30vh;
+  }
+  @include for-tablet-portrait-up {
+    padding-top: 30vh;
+  }
+
+  @include for-tablet-landscape-up {
+    padding-top: 20vh;
+  }
+  @include for-desktop-up {
+    padding-top: 10vh;
+  }
+  @include for-big-desktop-up {
+    padding-top: 10vh;
+  }
+}
+
+.headerIconContainer {
+  text-align: center;
+
+  @include for-phone-only {
+    width: 303px;
+    height: 81px;
+  }
+}
+
+.linkChannelContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 30px;
+
+  @include for-phone-only {
+    margin-bottom: 40vh;
+  }
+  @include for-tablet-portrait-up {
+    margin-bottom: 40vh;
+  }
+
+  @include for-tablet-landscape-up {
+    margin-bottom: 25vh;
+  }
+  @include for-desktop-up {
+    margin-bottom: 25vh;
+  }
+  @include for-big-desktop-up {
+    margin-bottom: 25vh;
+  }
+}
+
+.divider {
+  @include for-phone-only {
+    height: 10px;
+  }
+
+  @include for-tablet-portrait-up {
+    height: 15px;
+  }
+
+  @include for-tablet-landscape-up {
+    height: 20px;
+  }
+
+  @include for-desktop-up {
+    height: 25px;
+  }
+
+  @include for-big-desktop-up {
+    height: 25px;
+  }
+}

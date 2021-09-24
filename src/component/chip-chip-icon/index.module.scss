@@ -1,0 +1,49 @@
+@import "src/asset/style/mixin";
+
+.chipChipIconMain {
+
+  @include for-phone-only {
+    width: 303px;
+    height: 81px;
+  }
+
+  @include for-tablet-portrait-up {
+    width: 400px;
+  }
+
+  @include for-tablet-landscape-up {
+    width: 500px;
+  }
+
+  @include for-desktop-up {
+    width: 600px;
+  }
+
+  @include for-big-desktop-up {
+    width: 600px;
+  }
+}
+
+.chipChipIconDecorator {
+
+  @include for-phone-only {
+    width: 123px;
+    height: 32px;
+  }
+
+  @include for-tablet-portrait-up {
+    width: 186px;
+  }
+
+  @include for-tablet-landscape-up {
+    width: 246px;
+  }
+
+  @include for-desktop-up {
+    width: 369px;
+  }
+
+  @include for-big-desktop-up {
+    width: 492px;
+  }
+}

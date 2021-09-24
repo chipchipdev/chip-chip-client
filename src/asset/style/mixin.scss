@@ -1,0 +1,32 @@
+@import "src/asset/style/font.scss";
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+@mixin font-light($font-size: 24px) {
+  font-family: comic-light, "Helvetica Neue", "PingFang HK", "Heiti TC", "Lantinghei SC", sans-serif;
+  font-size: $font-size;
+}
+
+@mixin font-regular($font-size: 24px) {
+  font-family: comic-regular, "Helvetica Neue", "PingFang HK", "Heiti TC", "Lantinghei SC", sans-serif;
+  font-size: $font-size;
+}
+
+@mixin font-bold($font-size: 24px) {
+  font-family: comic-bold, "Helvetica Neue", "PingFang HK", "Heiti TC", "Lantinghei SC", sans-serif;
+  font-size: $font-size;
+}

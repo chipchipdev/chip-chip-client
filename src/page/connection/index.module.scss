@@ -1,0 +1,19 @@
+@import "src/asset/style/mixin";
+
+.connectionContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title {
+  padding-top: 20px;
+  @include font-bold(32px);
+}
+
+.content {
+  @include font-light(24px);
+}

@@ -1,0 +1,53 @@
+{
+  "name": "chip-chip-react-client",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@chip-chip/core": "latest",
+    "@chip-chip/react-library": "latest",
+    "@chip-chip/webrtc-channel-client": "latest",
+    "@mui/lab": "latest",
+    "@mui/material": "latest",
+    "@mui/styled-engine-sc": "latest",
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "react-scripts": "latest",
+    "sass": "^1.42.1",
+    "styled-components": "latest"
+  },
+  "scripts": {
+    "tsc": "./node_modules/.bin/tsc",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/react-router-dom": "latest",
+    "@types/styled-components": "latest",
+    "customize-cra": "latest",
+    "eslint-config-airbnb": "lastest",
+    "eslint-config-airbnb-typescript": "lastest",
+    "react-app-rewired": "latest",
+    "typescript": "latest"
+  }
+}

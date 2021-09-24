@@ -1,0 +1,101 @@
+@import "src/asset/style/mixin";
+
+.homeContainer {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include for-phone-only {
+    padding-top: 30vh;
+  }
+  @include for-tablet-portrait-up {
+    padding-top: 30vh;
+  }
+
+  @include for-tablet-landscape-up {
+    padding-top: 20vh;
+  }
+  @include for-desktop-up {
+    padding-top: 10vh;
+  }
+  @include for-big-desktop-up {
+    padding-top: 10vh;
+  }
+}
+
+.headerIconContainer {
+  text-align: center;
+
+  @include for-phone-only {
+    width: 303px;
+    height: 167px;
+  }
+
+  @include for-tablet-portrait-up {
+    width: 400px;
+    height: 250px;
+  }
+
+  @include for-tablet-landscape-up {
+    width: 500px;
+    height: 340px;
+  }
+
+  @include for-desktop-up {
+    width: 600px;
+    height: 430px;
+  }
+
+  @include for-big-desktop-up {
+    width: 600px;
+    height: 430px;
+  }
+}
+
+.iconDescription {
+  @include font-regular;
+  line-height: 28px;
+  padding-top: 30px;
+
+  @include for-tablet-portrait-up {
+    @include font-regular(35px);
+    line-height: 40px;
+  }
+
+  @include for-tablet-landscape-up {
+    @include font-regular(40px);
+    line-height: 45px;
+  }
+  @include for-desktop-up {
+    @include font-regular(45px);
+    line-height: 50px;
+  }
+  @include for-big-desktop-up {
+    @include font-regular(45px);
+    line-height: 50px;
+
+  }
+}
+
+.footerButtonContainer {
+  @include for-phone-only {
+    margin-bottom: 22vh;
+  }
+  @include for-tablet-portrait-up {
+    margin-bottom: 22vh;
+  }
+
+  @include for-tablet-landscape-up {
+    margin-bottom: 20vh;
+  }
+  @include for-desktop-up {
+    margin-bottom: 10vh;
+  }
+  @include for-big-desktop-up {
+    margin-bottom: 10vh;
+  }
+}
