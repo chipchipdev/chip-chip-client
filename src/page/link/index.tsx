@@ -17,25 +17,11 @@ export const Link = () => {
   const { map } = useI18nContext();
 
   return (
-    <main className={styles.linkContainer}>
-      <Snackbar
-        open={!!error}
-        autoHideDuration={6000}
-        onClose={() => setError('')}
-        message={error}
-      >
-        <Alert
-          sx={{ width: '100%' }}
-          onClose={() => setError('')}
-          severity="error"
-        >
-          {error}
-        </Alert>
-      </Snackbar>
+    <section className={styles.linkContainer}>
       <header className={styles.headerIconContainer}>
         <ChipChipIcon />
       </header>
-      <section className={styles.linkChannelContainer}>
+      <main className={styles.linkChannelContainer}>
         <ChipChipInput
           maxRows={1}
           inputRef={idInputElement}
@@ -66,7 +52,23 @@ export const Link = () => {
         >
           {map.START_CONNECTION_BUTTON}
         </ChipChipButton>
-      </section>
-    </main>
+      </main>
+      <footer>
+        <Snackbar
+          open={!!error}
+          autoHideDuration={6000}
+          onClose={() => setError('')}
+          message={error}
+        >
+          <Alert
+            sx={{ width: '100%' }}
+            onClose={() => setError('')}
+            severity="error"
+          >
+            {error}
+          </Alert>
+        </Snackbar>
+      </footer>
+    </section>
   );
 };

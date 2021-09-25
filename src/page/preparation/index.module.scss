@@ -1,0 +1,24 @@
+@import "src/asset/style/mixin";
+
+.preparationContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preparationContainerHeader {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include font-bold(32px);
+}

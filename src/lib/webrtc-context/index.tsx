@@ -17,26 +17,30 @@ type MainChannel = {
   >
 };
 
+export type ParticipantMessage = { name: string, id: string };
+export type BeOwnerMessage = { id: string, owner: boolean };
+export type NextMessage = { next: boolean };
+
 type MessageChannel = {
   id: string,
-  channel: WebrtcChannelClient<{ name: string, id: string }>
+  channel: WebrtcChannelClient<ParticipantMessage | BeOwnerMessage | NextMessage>
 };
 
 const WebrtcContext = React.createContext<{
   channels?: {
-    main?: MainChannel,
-    message?: MessageChannel,
+    main: MainChannel,
+    message: MessageChannel,
   }
-  setMainChannel: Dispatch<SetStateAction<MainChannel | undefined>>,
-  setMessageChannel: Dispatch<SetStateAction<MessageChannel | undefined>>,
+  setMainChannel: Dispatch<SetStateAction<MainChannel>>,
+  setMessageChannel: Dispatch<SetStateAction<MessageChannel>>,
 }>({
-  setMainChannel: {} as Dispatch<SetStateAction<MainChannel | undefined>>,
-  setMessageChannel: {} as Dispatch<SetStateAction<MessageChannel | undefined>>,
+  setMainChannel: {} as Dispatch<SetStateAction<MainChannel>>,
+  setMessageChannel: {} as Dispatch<SetStateAction<MessageChannel>>,
 });
 
 export const WebrtcProvider = ({ children }: { children: any }) => {
-  const [mainChannel, setMainChannel] = useState<MainChannel>();
-  const [messageChannel, setMessageChannel] = useState<MessageChannel>();
+  const [mainChannel, setMainChannel] = useState<MainChannel>({} as MainChannel);
+  const [messageChannel, setMessageChannel] = useState<MessageChannel>({} as MessageChannel);
 
   return (
     <WebrtcContext.Provider value={{

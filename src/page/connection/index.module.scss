@@ -5,15 +5,211 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.connectionContainerHeader {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
-.title {
-  padding-top: 20px;
-  @include font-bold(32px);
+.connectionContainerMain {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 65vh;
+}
+
+.list {
+  width: 90vw;
+  text-align: left;
+  height: 100%;
+  overflow: scroll;
 }
 
 .content {
-  @include font-light(24px);
+  line-height: 1.5;
+  position: relative;
+  padding-left: 20px;
+  &::before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    background: black;
+
+    @include for-phone-only {
+      width: 8px;
+      height: 8px;
+    }
+
+    @include for-tablet-portrait-up {
+      width: 8px;
+      height: 8px;
+    }
+
+    @include for-tablet-landscape-up {
+      width: 10px;
+      height: 10px;
+    }
+
+    @include for-desktop-up {
+      width: 12px;
+      height: 12px;
+    }
+
+    @include for-big-desktop-up {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  @include for-phone-only {
+    @include font-light(20px);
+  }
+
+  @include for-tablet-landscape-up {
+    @include font-light(24px);
+  }
+
+  @include for-tablet-portrait-up {
+    @include font-light(24px);
+  }
+
+  @include for-desktop-up {
+    @include font-light(28px);
+  }
+
+  @include for-big-desktop-up {
+    @include font-light(28px);
+  }
+}
+
+.contentRed {
+  line-height: 1.5;
+  position: relative;
+  padding-left: 20px;
+  &::before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    background: red;
+
+    @include for-phone-only {
+      width: 8px;
+      height: 8px;
+    }
+
+    @include for-tablet-portrait-up {
+      width: 8px;
+      height: 8px;
+    }
+
+    @include for-tablet-landscape-up {
+      width: 10px;
+      height: 10px;
+    }
+
+    @include for-desktop-up {
+      width: 12px;
+      height: 12px;
+    }
+
+    @include for-big-desktop-up {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  @include for-phone-only {
+    @include font-light(20px);
+  }
+
+  @include for-tablet-landscape-up {
+    @include font-light(24px);
+  }
+
+  @include for-tablet-portrait-up {
+    @include font-light(24px);
+  }
+
+  @include for-desktop-up {
+    @include font-light(28px);
+  }
+
+  @include for-big-desktop-up {
+    @include font-light(28px);
+  }
+}
+
+.bold {
+  @include font-regular(20px);
+
+  @include for-tablet-landscape-up {
+    @include font-regular(24px);
+  }
+
+  @include for-desktop-up {
+    @include font-regular(28px);
+  }
+}
+
+.divider {
+  @include for-phone-only {
+    height: 10px;
+  }
+
+  @include for-tablet-portrait-up {
+    height: 15px;
+  }
+
+  @include for-tablet-landscape-up {
+    height: 20px;
+  }
+
+  @include for-desktop-up {
+    height: 25px;
+  }
+
+  @include for-big-desktop-up {
+    height: 25px;
+  }
+}
+
+.connectionContainerFooter {
+
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include for-phone-only {
+    margin-bottom: 22vh;
+  }
+  @include for-tablet-portrait-up {
+    margin-bottom: 22vh;
+  }
+
+  @include for-tablet-landscape-up {
+    margin-bottom: 20vh;
+  }
+  @include for-desktop-up {
+    margin-bottom: 10vh;
+  }
+  @include for-big-desktop-up {
+    margin-bottom: 10vh;
+  }
 }

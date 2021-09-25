@@ -8,7 +8,7 @@ const I18nContext = React.createContext<{
 });
 
 export const I18nProvider = ({ children }: { children: any }) => {
-  const map = LANGUAGE_MAP.enUS;
+  const map = LANGUAGE_MAP.zhCN;
 
   return (
     <I18nContext.Provider value={{

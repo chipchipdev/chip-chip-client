@@ -7,19 +7,21 @@ import { FullscreenDialog } from './component/fullscreen-dialog';
 import { Home } from './page/home';
 import { Link } from './page/link';
 import { Connection } from './page/connection';
+import { Preparation } from './page/preparation';
 
 export const App = () => {
   const isFullScreen = useFullscreenStatus();
 
   return (
     <StyledEngineProvider injectFirst>
-      <FullscreenDialog open={!isFullScreen} />
+      <FullscreenDialog open={isFullScreen} />
       <div>
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/link" component={Link} />
             <Route exact path="/connection" component={Connection} />
+            <Route exact path="/preparation" component={Preparation} />
           </Switch>
         </Router>
       </div>
